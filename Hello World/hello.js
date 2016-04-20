@@ -3,5 +3,5 @@ const board = new five.Board();
 
 board.on('ready', function() {
   var led = new five.Led(13);
-  led.blink();
+  led.blink(500);
 });
