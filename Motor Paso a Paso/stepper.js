@@ -14,6 +14,6 @@ board.on('ready', function() {
 
   button1.on('press', function() {
     console.log("Start");
-    stepper.step(0, 100);
+    stepper.step(0, 1000);
   });
 });
