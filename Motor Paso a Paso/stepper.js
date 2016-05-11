@@ -14,6 +14,10 @@ board.on('ready', function() {
 
   button1.on('press', function() {
     console.log("Start");
+<<<<<<< HEAD
     stepper.step(0, 200, 0);
+=======
+    stepper.step(0, 1000);
+>>>>>>> cf7e693418e9b685c2af3450897abc7c74cb0e13
   });
 });
