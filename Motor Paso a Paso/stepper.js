@@ -20,7 +20,7 @@ board.on('ready', function() {
 
   button2.on('press', function() {
     n += 200;
-    if (n == 2600) n = 200;
+    if (n == 2800) n = 200;
   });
 
 });
