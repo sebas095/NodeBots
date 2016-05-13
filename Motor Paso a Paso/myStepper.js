@@ -6,7 +6,7 @@ function Stepper(state) {
       if (i == n) return;
       i++;
       switch(current) {
-        case 0:{
+        case 0: {
           nstate[0].off();
           nstate[1].off();
           nstate[2].off();
@@ -38,9 +38,11 @@ function Stepper(state) {
           current = 0;
           break;
         }
+      }
       console.log("Step: ", i, " State: ", current);
       self(i, n, current);
     }, 0.5);
+  }
 }
 
 module.exports.Stepper = Stepper;
