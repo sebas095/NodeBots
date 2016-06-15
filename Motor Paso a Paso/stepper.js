@@ -1,7 +1,7 @@
 const five = require('johnny-five');
 const myStepper = require('./myStepper');
 const board = new five.Board();
-var n = 600;
+var n = 1200;
 
 board.on('ready', function() {
   // Motor #1
@@ -26,13 +26,13 @@ board.on('ready', function() {
   button1.on('press', function() {
     //console.log("Start");
     console.log("Motor #1");
-    stepper.step(0, n, 0);
+    stepper.step(0, n, 0, 1);
   });
 
   button2.on('press', function() {
     console.log("Motor #2");
-    stepper2.step(0, n, 0);
-    //n += 200;
-    //if (n == 2800) n = 200;
+    stepper2.step(0, n, 0, 1);
+    // n += 200;
+    // if (n == 2800) n = 200;
   });
 });
