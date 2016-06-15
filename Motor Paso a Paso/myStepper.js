@@ -9,21 +9,21 @@ function Stepper(state) {
         case 0: {
           nstate[0].off();
           nstate[1].off();
-          nstate[2].off();
+          nstate[2].on();
           nstate[3].on();
           current = 1;
           break;
         }
         case 1: {
           nstate[0].off();
-          nstate[1].off();
+          nstate[1].on();
           nstate[2].on();
           nstate[3].off();
           current = 2;
           break;
         }
         case 2: {
-          nstate[0].off();
+          nstate[0].on();
           nstate[1].on();
           nstate[2].off();
           nstate[3].off();
@@ -34,14 +34,14 @@ function Stepper(state) {
           nstate[0].on();
           nstate[1].off();
           nstate[2].off();
-          nstate[3].off();
+          nstate[3].on();
           current = 0;
           break;
         }
       }
       console.log("Step: ", i, " State: ", current);
       self(i, n, current);
-    }, 0.5);
+    }, 10);
   }
 }
 
