@@ -1,0 +1,27 @@
+{
+  "name": "impresora-2d",
+  "version": "1.0.0",
+  "description": "Por medio de NodeJS y arduino se hara un prototipo de una impresora 2D",
+  "main": "stepper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebas095/NodeBots.git"
+  },
+  "author": [
+    "Sebastian Duque Restrepo",
+    "Carolina Gomez Trejos"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebas095/NodeBots/issues"
+  },
+  "homepage": "https://github.com/sebas095/NodeBots#readme",
+  "dependencies": {
+    "extract-svg-path": "^2.1.0",
+    "johnny-five": "^0.9.57",
+    "parse-svg-path": "^0.1.1"
+  }
+}

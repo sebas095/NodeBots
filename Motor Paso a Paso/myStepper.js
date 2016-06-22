@@ -10,34 +10,34 @@ class Stepper {
       if (dir > 0) {
         switch(current) {
           case 0: {
-            this.state[0] = 0;
-            this.state[1] = 0;
-            this.state[2] = 1;
-            this.state[3] = 1;
+            this.state[0].off();
+            this.state[1].off();
+            this.state[2].on();
+            this.state[3].on();
             current = 1;
             break;
           }
           case 1: {
-            this.state[0] = 0;
-            this.state[1] = 1;
-            this.state[2] = 1;
-            this.state[3] = 0;
+            this.state[0].off();
+            this.state[1].on();
+            this.state[2].on();
+            this.state[3].off();
             current = 2;
             break;
           }
           case 2: {
-            this.state[0] = 1;
-            this.state[1] = 1;
-            this.state[2] = 0;
-            this.state[3] = 0;
+            this.state[0].on();
+            this.state[1].on();
+            this.state[2].off();
+            this.state[3].off();
             current = 3;
             break;
           }
           case 3: {
-            this.state[0] = 1;
-            this.state[1] = 0;
-            this.state[2] = 0;
-            this.state[3] = 1;
+            this.state[0].on();
+            this.state[1].off();
+            this.state[2].off();
+            this.state[3].on();
             current = 0;
             break;
           }
@@ -48,34 +48,34 @@ class Stepper {
         // Giro inverso
         switch(current) {
           case 0: {
-            this.state[0] = 1;
-            this.state[1] = 0;
-            this.state[2] = 0;
-            this.state[3] = 1;
+            this.state[0].on();
+            this.state[1].off();
+            this.state[2].off();
+            this.state[3].on();
             current = 1;
             break;
           }
           case 1: {
-            this.state[0] = 1;
-            this.state[1] = 1;
-            this.state[2] = 0;
-            this.state[3] = 0;
+            this.state[0].on();
+            this.state[1].on();
+            this.state[2].off();
+            this.state[3].off();
             current = 2;
             break;
           }
           case 2: {
-            this.state[0] = 0;
-            this.state[1] = 1;
-            this.state[2] = 1;
-            this.state[3] = 0;
+            this.state[0].off();
+            this.state[1].on();
+            this.state[2].on();
+            this.state[3].off();
             current = 3;
             break;
           }
           case 3: {
-            this.state[0] = 0;
-            this.state[1] = 0;
-            this.state[2] = 1;
-            this.state[3] = 1;
+            this.state[0].off();
+            this.state[1].off();
+            this.state[2].on();
+            this.state[3].on();
             current = 0;
             break;
           }
