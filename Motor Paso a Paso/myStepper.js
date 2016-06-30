@@ -7,7 +7,7 @@ class Stepper {
     setTimeout(() => {
       if (i == n) return;
       i++;
-      if (dir > 0) {
+      if (dir) {
         switch(current) {
           case 0: {
             this.state[0].off();
@@ -44,7 +44,7 @@ class Stepper {
         }
       }
 
-      else if (dir < 0) {
+      else if (!dir) {
         // Giro inverso
         switch(current) {
           case 0: {
