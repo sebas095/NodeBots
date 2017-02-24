@@ -10,10 +10,10 @@ class Stepper {
       if (dir) {
         switch(current) {
           case 0: {
-            this.state[0].off();
-            this.state[1].off();
-            this.state[2].on();
-            this.state[3].on();
+            this.state[0].on();
+            this.state[1].on();
+            this.state[2].off();
+            this.state[3].off();
             current = 1;
             break;
           }
@@ -26,10 +26,10 @@ class Stepper {
             break;
           }
           case 2: {
-            this.state[0].on();
-            this.state[1].on();
-            this.state[2].off();
-            this.state[3].off();
+            this.state[0].off();
+            this.state[1].off();
+            this.state[2].on();
+            this.state[3].on();
             current = 3;
             break;
           }
@@ -84,7 +84,7 @@ class Stepper {
 
       console.log("Step: ", i, " State: ", current);
       this.step(i, n, current, dir);
-    }, 10);
+    }, 20); // 10
   }
 }
 
@@ -179,3 +179,37 @@ module.exports.Stepper = Stepper;
 // }
 //
 // module.exports.Stepper = Stepper;
+/*
+case 0: {
+  this.state[0].off();
+  this.state[1].off();
+  this.state[2].off();
+  this.state[3].on();
+  current = 1;
+  break;
+}
+case 1: {
+  this.state[0].off();
+  this.state[1].off();
+  this.state[2].on();
+  this.state[3].off();
+  current = 2;
+  break;
+}
+case 2: {
+  this.state[0].off();
+  this.state[1].on();
+  this.state[2].off();
+  this.state[3].off();
+  current = 3;
+  break;
+}
+case 3: {
+  this.state[0].on();
+  this.state[1].off();
+  this.state[2].off();
+  this.state[3].off();
+  current = 0;
+  break;
+}
+ */
